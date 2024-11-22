@@ -13,7 +13,7 @@ Prod 환경에서 data insert 중 Database 를 못 찾는 에러가 발생했다
  at com.clickhouse.jdbc.internal.ClickHouseConnectionImpl.getTableColumns(ClickHouseConnectionImpl.java:267)
  at com.clickhouse.jdbc.internal.ClickHouseConnectionImpl.prepareStatement(ClickHouseConnectionImpl.java:843)
  at com.clickhouse.jdbc.ClickHouseConnection.prepareStatement(ClickHouseConnection.java:121)
- at com.coupang.csdp.spark.etl.common.clickhouse.ClickHouseJdbcConnector$.insert(ClickHouseJdbcConnector.scala:40)
+ at com.c.dp.spark.etl.common.clickhouse.ClickHouseJdbcConnector$.insert(ClickHouseJdbcConnector.scala:40)
  ```
  <br/>
 
