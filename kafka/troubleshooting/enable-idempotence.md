@@ -16,7 +16,7 @@ https://learn.conduktor.io/kafka/idempotent-kafka-producer/
 Producer 는 메시지를 발생하면 Kafka 로 부터 commit 에 대한 ack 를 받아야 한다.  
 하지만 네트워크 문제등의 이유로 ack 를 받지 못하면 재시도하고 이럴경우 commit 을 중복으로 하게 된다.
 
-이를 위해 idempotence 옵션이 추가되었다.
+이를 위해 idempotence 옵션이 추가되었다.  
 <img src="../../docs/kafka-idempotence-2.png" width="600px" height="250px" />  
 
 문제는 Flink 버전을 1.16 -> 1.17 로 올리면서 kafka-clients 버전도 2.x -> 3.x 로 올라갔고,  
