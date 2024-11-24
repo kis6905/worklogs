@@ -37,7 +37,7 @@ Query 를 보면 system 테이블을 조회하는데,
 Error log 를 보면 DB Server 설정 중 query_cache_system_table_handling 을 'save' 또는 'ignore' 로 변경하라고 한다.  
 query_cache_system_table_handling 의 default 값은 'throw' 다.  
 https://clickhouse.com/docs/en/operations/settings/settings#query_cache_system_table_handling
-<img src="../images/clickhouse-query-cache.png" width="600px" height="240px" />
+<img src="../../docs/clickhouse-query-cache.png" width="600px" height="240px" />
 <br/>
 <br/>
 
