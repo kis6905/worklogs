@@ -1,6 +1,6 @@
 ## ClickHouse TroubleShooting
-* [Query performance](./truobleshooting/query-performance.md)
-* [System table query cache](./truobleshooting/system-table-query-cache.md)
-* [Database dose not exist](./truobleshooting/database-does-not-exist.md)
-* [Delete row not working](./truobleshooting/delete-row-not-working.md)
-* [Select from only one replica](./truobleshooting/select-from-only-one-replica.md)
+* [Query performance](troubleshtooing/query-performance.md)
+* [System table query cache](troubleshtooing/system-table-query-cache.md)
+* [Database dose not exist](troubleshtooing/database-does-not-exist.md)
+* [Delete row not working](troubleshtooing/delete-row-not-working.md)
+* [Select from only one replica](troubleshtooing/select-from-only-one-replica.md)
