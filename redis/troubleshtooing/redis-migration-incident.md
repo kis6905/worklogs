@@ -1,6 +1,6 @@
 ### Problem
-전사 OKR 인 취약성 제거의 일환으로 Redis Version 업그레이드 Task 를 진행하게 되었다.
-가이드에 따라 Redis SDK 를 최신버전으로 적용한 후 Migration 당일 Switchover 후 RedisCommandTimeout Error 가 발생했고,    
+전사 OKR 인 취약성 제거의 일환으로 Redis Version 업그레이드 Task 를 진행하게 되었다.  
+가이드에 따라 Redis SDK 를 최신버전으로 적용한 후 Migration 당일 Switchover 후 RedisCommandTimeout Error 가 발생했고,  
 이로인해 서비스 전면 장애가 발생했다.
 <br/>
 <br/>
@@ -21,13 +21,12 @@ val redisCluster = RedisCluster("my-redis", "PROD") // SDK Class
 val factory = LettuceConnectionFactory(clusterConfig, clientConfig)
 factory.clientResources = redisCluster.clientResources
 ```
-SDK 를 사용할 경우 제공된 RedisCluster 클래스만 이용하면 되는데,  
+SDK 를 사용할 경우, SDK 에서 제공하는 RedisCluster 클래스만 이용하면 되는데,  
 위와 같이 별도의 LettuceClient 를 따로 생성해 사용하고 있었던 것이다.  
-또한 이렇게 생성한 LettuceClient 는 SDK 가 생성한 clientResource 를 같이 사용한다.  
+또한 이렇게 생성한 LettuceClient 는 SDK 가 생성한 clientResource 를 같이 사용하고 있었다.  
 
-그러다보니 Switchover 이벤트가 발생하면 SDK 내부에선 clientResources 를 shutdown 하고,  
+그러다보니 Switchover 이벤트가 발생하면 clientResources 를 shutdown 하고,  
 이를 같이 사용하던 LettuceClient 에서 RedisCommandTimeout 이 발생했다.  
-
 * 별도의 LettuceClient 를 사용하는 것까지는, Switchover 가 정상적으로 되지 않을 뿐 장애로 이어지진 않았을 것이다.
 <br/>
 <br/>
