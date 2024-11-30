@@ -6,7 +6,7 @@ Prod 환경에서 data insert 중 Database 를 못 찾는 에러가 발생했다
 추가로 insert query 의 50% 정도만 발생했다.
  ```
  java.sql.SQLException: Code: 81. DB::Exception: Database andon does not exist. (UNKNOWN_DATABASE) (version 24.4.1.2088 (official build))
- , server ClickHouseNode [uri=http://andon-rest.ch.coupangdb.net:3306/andon, options={driver=com.clickhouse.jdbc.ClickHouseDriver}]@507994551
+ , server ClickHouseNode [uri=http://ch.db.net:3306/db, options={driver=com.clickhouse.jdbc.ClickHouseDriver}]@507994551
  at com.clickhouse.jdbc.SqlExceptionUtils.handle(SqlExceptionUtils.java:85)
  at com.clickhouse.jdbc.SqlExceptionUtils.create(SqlExceptionUtils.java:31)
  at com.clickhouse.jdbc.SqlExceptionUtils.handle(SqlExceptionUtils.java:90)

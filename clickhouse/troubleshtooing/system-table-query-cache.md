@@ -5,7 +5,7 @@
 Spark 에서 ClickHouse jdbc 를 사용해 ClickHouse 연동 시 Dev 에선 발생하지 않던 Exception 이 Prod 에서 발생한다.
  ```
  Caused by: java.sql.SQLException: Code: 719. DB::Exception: The query result was not cached because the query contains a system table. Use setting `query_cache_system_table_handling = 'save'` or `= 'ignore'` to cache the query result regardless or to omit caching. (QUERY_CACHE_USED_WITH_SYSTEM_TABLE) (version 24.4.1.2088 (official build))
- , server ClickHouseNode [uri=http://andon-rest.ch.coupangdb.net:3306/andon, options={driver=com.clickhouse.jdbc.ClickHouseDriver}]@-449390932
+ , server ClickHouseNode [uri=http://ch.db.net:3306/db, options={driver=com.clickhouse.jdbc.ClickHouseDriver}]@-449390932
  at com.clickhouse.jdbc.SqlExceptionUtils.handle(SqlExceptionUtils.java:85)
  at com.clickhouse.jdbc.SqlExceptionUtils.create(SqlExceptionUtils.java:31)
  at com.clickhouse.jdbc.SqlExceptionUtils.handle(SqlExceptionUtils.java:90)

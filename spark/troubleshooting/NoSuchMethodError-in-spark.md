@@ -26,17 +26,17 @@ Local 에서 테스트 후 Prod 에서 실행해보니 NoSuchMethodError 가 발
      at com.clickhouse.jdbc.ClickHouseDataSource.getConnection(ClickHouseDataSource.java:46)
      ...
  ```
-Log 를 보면 ClickHouse client 는 apache httpclient5 를 사용하는데, httpclient5 class 들을 못찾는다.
+ClickHouse client 는 apache httpclient5 를 사용하는데, httpclient5 class 들을 못찾는다.
 <br/>
 <br/>
 
 ### Cause
-다른 곳에서 httpclient4 를 사용하고 있어 충돌된것으로 보인다. httpclient5 class를 못찾는 것으로 보인다.
+다른 곳에서 httpclient4 를 사용하고 있어 충돌된 것으로 보인다.
 <br/>
 <br/>
 
 ### Solution
-다른 곳에서 사용하는 httpclient4를 5로 올리는 것이 좋으나,  
+httpclient4 를 5로 올리는 것이 좋으나,  
 모든 부분을 테스트해야 하므로 httpclient5 를 relocate 하는 방법으로 해결했다.  
 
 shadowJar 시 httpclient5 pacakge relocate
