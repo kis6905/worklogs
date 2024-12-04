@@ -3,7 +3,6 @@
 
 ## TODO
 * DR - AZ 분리
-* JDK Diff
 * Spring Diff
 * Kafka 병렬 컨슈머
 * Apache Flink
