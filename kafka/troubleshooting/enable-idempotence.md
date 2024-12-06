@@ -8,10 +8,8 @@ org.apache.kafka.common.errors.ClusterAuthorizationException: Cluster authorizat
 <br/>
 
 ### Cause
-Cluster authorization failed 인증 실패 오류가 발생해 찾아보니  
-해결법으로 kafka producer 옵션중 enabled.idempotence 를 true 로 세팅하라는 답변을 보고 idempotence 에 대해 찾아봤다.  
-
-https://learn.conduktor.io/kafka/idempotent-kafka-producer/
+원인을 찾다보니 Log 에서 idempotence 옵션을 발견했다.  
+https://learn.conduktor.io/kafka/idempotent-kafka-producer/  
 <img src="../../docs/kafka-idempotence-1.png" width="600px" height="250px" />  
 Producer 는 메시지를 발생하면 Kafka 로 부터 commit 에 대한 ack 를 받아야 한다.  
 하지만 네트워크 문제등의 이유로 ack 를 받지 못하면 재시도하고 이럴경우 commit 을 중복으로 하게 된다.
