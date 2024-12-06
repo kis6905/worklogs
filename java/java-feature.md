@@ -10,7 +10,7 @@ Java LTS 버전 단위로 추가된 기능 정리
 * LocalDate, LocalDateTime
 
 ### Java 11
-* Interface private mathod
+* Interface private method
 * Reactive Streams
   * java.util.concurrent.Flow 를 통해 Reactive Streams 를 지원한다.
 * Default gc 가 G1GC 이다.
