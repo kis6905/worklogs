@@ -1,11 +1,11 @@
 
-### Spring 5(Boot 2.x)
+### Spring 5 (Boot 2.x)
 * WebFlux
 * Java 8+
 * HTTP/2 지원
 * Kotlin 지원
 
-### Spring 6(Boot 3.x)
+### Spring 6 (Boot 3.x)
 * Java 17+
 * Kotlin 1.7+
 * Gradle 7.5+
